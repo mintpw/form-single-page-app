@@ -64,10 +64,12 @@ const UserTable = () => {
   useEffect(() => {
     if (localStorage.getItem("userData")) {
       const userLocalStorage = JSON.parse(localStorage.getItem("userData"));
-      setData(userLocalStorage);
-      setNewKey(
-        parseInt(userLocalStorage[userLocalStorage.length - 1].key) + 1
-      );
+      if (userLocalStorage.length > 0) {
+        setData(userLocalStorage);
+        setNewKey(
+          parseInt(userLocalStorage[userLocalStorage.length - 1].key) + 1
+        );
+      }
     }
   }, []);
 

@@ -1,11 +1,11 @@
 import "./App.css";
-import UserTable from "./components/UserTable";
+import HomePage from "./pages";
 
 function App() {
   return (
     <div className="app">
       <div className="main">
-        <UserTable />
+        <HomePage />
       </div>
     </div>
   );
